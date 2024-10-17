@@ -4,10 +4,10 @@ clear; clc; close all;
 % N_vals = [11, 21, 61, 101, 201];  % Different numbers of nodes to test
 % terminal_velocities = zeros(size(N_vals));  % Store terminal velocities for each N
 
-dt_vals = [1, 1e-3, 1e-6];  % Different time steps to test
-terminal_velocities_dt = zeros(size(dt_vals));  % Store terminal velocities for each dt
+% dt_vals = [1, 1e-3, 1e-6];  % Different time steps to test
+% terminal_velocities_dt = zeros(size(dt_vals));  % Store terminal velocities for each dt
 
-for idx = 1:length(dt_vals) % Loops different N values or dt values
+% for idx = 1:length(dt_vals) % Loops different N values or dt values
     % N = N_vals(idx);
     N = 21;  % Update number of nodes 
 
@@ -184,9 +184,9 @@ for idx = 1:length(dt_vals) % Loops different N values or dt values
     % ylabel('Position of middle node,  [m]');
     % 
     % Capture the terminal velocity after simulation
-    terminal_velocities(idx) = all_mid_v(end);  % Assuming last velocity is terminal
+    % terminal_velocities(idx) = all_mid_v(end);  % Assuming last velocity is terminal
 
-end
+% end
 
 % % Plot terminal velocity vs. number of nodes
 % figure;
@@ -195,9 +195,9 @@ end
 % ylabel('Terminal Velocity [m/s]');
 % title('Terminal Velocity vs. Number of Nodes');
 
-% Plot terminal velocity vs. time step size
-figure;
-plot(dt_vals, terminal_velocities_dt, 'o-');
-xlabel('Time Step Size (\Delta t)');
-ylabel('Terminal Velocity [m/s]');
-title('Terminal Velocity vs. Time Step Size');
+% % Plot terminal velocity vs. time step size
+% figure;
+% plot(dt_vals, terminal_velocities_dt, 'o-');
+% xlabel('Time Step Size (\Delta t)');
+% ylabel('Terminal Velocity [m/s]');
+% title('Terminal Velocity vs. Time Step Size');
