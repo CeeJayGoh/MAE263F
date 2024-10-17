@@ -7,7 +7,7 @@ deltaL = RodLength / (N-1);
 
 % Radii of spheres
 R1 = 0.005; % meter
-R2 = 0.005; % meter
+R2 = 0.025; % meter
 R3 = 0.005; % meter
 
 % Density

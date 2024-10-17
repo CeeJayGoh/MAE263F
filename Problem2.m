@@ -156,32 +156,32 @@ clear; clc; close all;
         all_mid_v(c) = u(2*midNode);
         all_mid_q(c) = q(2*midNode);
     
-        % % Plot
-        % figure(1);
-        % plot( q(1:2:end), q(2:2:end), 'ro-');
-        % axis equal
-        % xlabel('x [meter]');
-        % ylabel('y [meter]');
-        % drawnow
+        % Plot
+        figure(1);
+        plot( q(1:2:end), q(2:2:end), 'ro-');
+        axis equal
+        xlabel('x [meter]');
+        ylabel('y [meter]');
+        drawnow
 
         % Update (new becomes old)
         q0 = q;
         u0 = u;
     end
-    % 
-    % % Plot middle node downward velocity
-    % figure(2);
-    % timeArray = (1:Nsteps) * dt;
-    % plot(timeArray, all_mid_v, 'k-');
-    % xlabel('Time, t [sec]');
-    % ylabel('Velocity (vertical) of middle node, v [m/s]');
-    % 
-    % % Plot middle node position vs time
-    % figure(3)
-    % plot(timeArray, all_mid_q, 'k-');
-    % title('Position of middle node vs Time')
-    % xlabel('Time, t [sec]');
-    % ylabel('Position of middle node,  [m]');
+
+    % Plot middle node downward velocity
+    figure(2);
+    timeArray = (1:Nsteps) * dt;
+    plot(timeArray, all_mid_v, 'k-');
+    xlabel('Time, t [sec]');
+    ylabel('Velocity (vertical) of middle node, v [m/s]');
+
+    % Plot middle node position vs time
+    figure(3)
+    plot(timeArray, all_mid_q, 'k-');
+    title('Position of middle node vs Time')
+    xlabel('Time, t [sec]');
+    ylabel('Position of middle node,  [m]');
     % 
     % Capture the terminal velocity after simulation
     % terminal_velocities(idx) = all_mid_v(end);  % Assuming last velocity is terminal
